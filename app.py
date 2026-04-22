@@ -551,7 +551,7 @@ if page == "🏠  Dashboard":
         hovermode='x unified',
         hoverlabel=dict(bgcolor='#0d1b2e', bordercolor='#7b5ea7', font=dict(color='#e0e6f0')),
     )
-    st.plotly_chart(fig_line, use_container_width=True)
+    st.plotly_chart(fig_line, width="stretch")
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -605,7 +605,7 @@ if page == "🏠  Dashboard":
             margin=dict(l=10, r=60, t=10, b=10),
             height=320,
         )
-        st.plotly_chart(fig_donut, use_container_width=True)
+        st.plotly_chart(fig_donut, width="stretch")
 
     with d_right:
         st.markdown("<br>", unsafe_allow_html=True)
@@ -685,7 +685,7 @@ if page == "🏠  Dashboard":
         bargap=0.35,
         hoverlabel=dict(bgcolor='#0d1b2e', bordercolor='#7b5ea7', font=dict(color='#e0e6f0')),
     )
-    st.plotly_chart(fig_bar, use_container_width=True)
+    st.plotly_chart(fig_bar, width="stretch")
 
     # ── Attack description cards below bar ──
     a1, a2, a3, a4 = st.columns(4)
@@ -961,7 +961,7 @@ elif page == "🔍  Analyze Request":
                     lambda x: "color: #00d4ff" if x == "Direct" else "color: #ffaa00",
                     subset=["Category"]
                 ),
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 
@@ -1230,7 +1230,7 @@ elif page == "📡  WiFi Scanner":
             yaxis=dict(title='Risk Score', gridcolor='#0d1b2e', range=[0, 115]),
             margin=dict(l=10, r=10, t=20, b=10), height=280,
         )
-        st.plotly_chart(fig_wifi, use_container_width=True)
+        st.plotly_chart(fig_wifi, width="stretch")
 
 
 # ═══════════════════════════════════════════════════════════
@@ -1479,4 +1479,4 @@ elif page == "🔗  URL Scanner":
                     yaxis=dict(title='Risk Score (0-100)', gridcolor='#0d1b2e', range=[0, 115]),
                     margin=dict(l=10, r=10, t=20, b=80), height=300,
                 )
-                st.plotly_chart(fig_url, use_container_width=True)
+                st.plotly_chart(fig_url, width="stretch")
