@@ -895,7 +895,7 @@ elif page == "🔍  Analyze Request":
                 margin=dict(l=20, r=20, t=40, b=20),
                 font=dict(color='#e0e6f0'),
             )
-            st.plotly_chart(fig_gauge, use_container_width=True)
+            st.plotly_chart(fig_gauge, width="stretch")
 
         with detail_col:
             st.markdown('<div class="section-header">📋 Connection Summary</div>', unsafe_allow_html=True)
