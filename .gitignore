@@ -1,0 +1,16 @@
+# Ignore datasets
+*.txt
+data/
+
+# Ignore notebooks
+*.ipynb
+
+# Ignore cache
+__pycache__/
+*.pyc
+
+# Ignore system files
+.DS_Store
+
+.env
+*.log
